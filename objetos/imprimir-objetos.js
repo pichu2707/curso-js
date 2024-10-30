@@ -13,3 +13,9 @@ console.log(persona.nombre + ', ' + persona.apellido);
 for( nombrePropiedad in persona){
     console.log(persona[nombrePropiedad]);
 }
+
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+let personaString = JSON.stringify(persona);
+console.log(personaString);
