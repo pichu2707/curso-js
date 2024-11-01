@@ -43,14 +43,14 @@ class Orden{
         return 5;
     }
 
-    constructo(){
+    constructor(){
         this._idOrden=++Orden.contadorOrden;
         this._productos=[];
         //this._contadoProductosAgregados=0;
     }
 
-    get _idOrden(){
-        this._idOrden;
+    get idOrden(){
+        return this._idOrden;
     }
 
     agregarProducto(producto){
@@ -63,6 +63,7 @@ class Orden{
     }
 
     calcularTotal(){
+        let totalVenta=0;
         for(let productos of this._productos){
             totalVenta += productos.precio; //TotalVenta= totalVenta+producto.Precio
         }
@@ -70,11 +71,11 @@ class Orden{
     }
 
     mostrarOrden(){
-        let productoOrden='';
+        let productosOrden='';
         for (let productos of this._productos){
-            productosOrden += productos.toString()+' ';
+            productosOrden += '\n{' + productos.toString()+'}';
         }
-        console.log(`Orden; ${this._idOrden} Total: ${this.calcularTotal}, Productos: ${productosOrden}`)
+        console.log(`Orden: ${this._idOrden} Total: ${this.calcularTotal()}€, Productos: ${productosOrden}`)
     }
 }
 
@@ -84,3 +85,10 @@ let orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
 orden1.mostrarOrden();
+let producto3 = new Producto('Cinturon', 50);
+let orden2 = new Orden();
+orden2.agregarProducto(producto1);
+orden2.agregarProducto(producto1);
+orden2.agregarProducto(producto3);
+orden2.agregarProducto(producto2);
+orden2.mostrarOrden();
