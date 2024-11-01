@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">
+        DOM con JS
+    </h1>
+    <p id="parrafo1">
+        Saludos!
+    </p>
+    <p id="parrafo2">
+        Ahora tenemos otro párrafo
+    </p>
+<script>
+    let cabecero=document.getElementById('cabecero');
+    console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+    cabecero.innerHTML="Este es el nuevo H1"
+
+    let parrafo1=document.getElementById('parrafo');
+    console.log(`Valor del párrafo: ${parrafo1.innerHTML}`);
+    parrafo1.innerHTML = "Ahora le metemos un nuevo valor al Párrafo por JS";
+</script>
+
+</body>
+</html>

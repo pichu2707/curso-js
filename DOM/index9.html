@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">
+        H1 del HTML
+    </h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br/>
+    <img id="imagen" src="https://analaizer.digital/wp-content/uploads/2024/09/logo-dos.png.webp"/>
+
+    <script>
+        function mostrar(){
+            document.getElementById('imagen').src = 'https://github.com/pichu2707/curso-js/raw/master/js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy-removebg-preview.png';
+            //podríamos concatenar el título en este caso haciendo
+            //document.getElementById('titulo').innerHTML += 'Título por JS';
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">
+        H1 del HTML
+    </h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br/>
+
+    <script>
+        function mostrar(){
+            document.getElementById('titulo').innerHTML = 'Título por JS';
+            //podríamos concatenar el título en este caso haciendo
+            //document.getElementById('titulo').innerHTML += 'Título por JS';
+        }
+    </script>
+    
+</body>
+</html>

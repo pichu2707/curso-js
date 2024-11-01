@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con JavaScript</title>
+    <style>
+        .azul{
+            color:blue;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="azul">
+        DOM con JS
+    </h1>
+    <p class="azul">
+        Saludos!
+    </p>
+    <p class="azul">
+        Ahora tenemos otro párrafo
+    </p>
+<script>
+    //accediendo a los contenidos y contando el número de párrafos
+    let elementos = document.querySelectorAll('p.azul');
+    console.log(`El número de párrafos son: ${elementos.length}`);
+    //modo clásico
+    // for(let i=0; i<elementos.length;i++){
+    //     console.log(`i: ${elementos[i].innerHTML}`);
+    // }
+    //Forma más corta de hacer lo mismo que el modo clásico
+    for(let elemento of elementos){
+        console.log(`${elemento.innerHTML}`);
+    }
+</script>
+
+</body>
+</html>

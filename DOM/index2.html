@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">
+        DOM con JS
+    </h1>
+    <p id="parrafo1">
+        Saludos!
+    </p>
+    <p id="parrafo2">
+        Ahora tenemos otro párrafo
+    </p>
+<script>
+    //accediendo a los contenidos y contando el número de párrafos
+    let parrafos = document.getElementsByTagName('p');
+    console.log(`El número de párrafos son: ${parrafos.length}`);
+    for(let i=0; i<parrafos.length;i++){
+        console.log(`i: ${parrafos[i].innerHTML}`);
+    }
+</script>
+
+</body>
+</html>
