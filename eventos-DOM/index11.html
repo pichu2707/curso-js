@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos del DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Manejando eventos del DOM con JS
+    </h1>
+    <form id="formulario">
+        Nombre <input type="text" id="nombre"/>
+        <br/><br/>
+        Apellido <input type="text" id="apellido"/>
+    </form>
+<script>
+    const forma = document.getElementById('formulario');
+    forma.addEventListener('focus',(evento)=>{
+        evento.target.style.background='yellow';
+    }, true);
+    forma.addEventListener('blur', (evento)=>{
+        evento.target.style.background='white';
+    }, true);
+</script>
+
+</body>
+</html>

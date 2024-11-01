@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos del DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Manejando eventos del DOM con JS
+    </h1>
+    <br/>
+    Nombre <input type="text" id="nombre"/>
+    <br/>
+    Apellido <input type="text" id="apellido"/>
+<script>
+    document.getElementById('nombre').addEventListener('focus', (evento) => {
+        evento.target.style.background = 'pink';
+    });
+    document.getElementById('nombre').addEventListener('blur',(evento)=>{
+        evento.target.style.background='white';
+    });
+    document.getElementById('apellido').addEventListener('focus', (evento)=>{
+        evento.target.style.background='pink';
+    });
+    document.getElementById('apellido').addEventListener('blur',(evento)=>{
+        evento.target.style.background='white';
+    });
+</script>
+
+</body>
+</html>

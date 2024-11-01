@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos del DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo" onmousedown="rojo(this)" onmouseup="azul(this)">
+        Manejando eventos del DOM con JS
+    </h1>
+    <br/>
+    Nombre <input type="text" id="nombre" onchange="convertir(this)"/>
+<script>
+    function rojo(titulo){
+        titulo.style.color = 'red';     
+        }
+    
+    function azul(titulo){
+        titulo.style.color = 'blue';
+    }
+</script>
+
+</body>
+</html>

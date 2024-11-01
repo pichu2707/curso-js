@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos del DOM con JavaScript</title>
+</head>
+<body onload="entrar()">
+    <h1 id="titulo">
+        Manejando eventos del DOM con JS
+    </h1>
+    <div id="mostrar"></div>
+<script>
+    function entrar(){
+        alert('Entrando en la página index3');
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'Las cookies están habilitadas';
+        } else {
+            texto = "Las cookies no están habilitadas";
+        }
+        document.getElementById('mostrar').innerHTML=texto;
+    }
+</script>
+
+</body>
+</html>

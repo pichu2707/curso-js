@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos del DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Manejando eventos del DOM con JS
+    </h1>
+    <br/>
+    Nombre <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br/>
+    Apellido <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+<script>
+    function cambiar(elementoInput){
+        elementoInput.style.background = 'green';
+    }
+    function regresar(elementoInput){
+        elementoInput.style.background='blue';
+    }
+</script>
+
+</body>
+</html>
